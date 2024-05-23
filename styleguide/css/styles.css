@@ -1,0 +1,469 @@
+/* Marbust Technology Company New Design 2020 */
+/* May 9th, 2020*/
+@import url("marbust-framework.css");
+.color1 {
+  color: #388DCE;
+}
+
+.bg1 {
+  background: #388DCE;
+}
+
+.color2 {
+  color: #24B4ED;
+}
+
+.bg2 {
+  background: #24B4ED;
+}
+
+.color3 {
+  color: #323232;
+}
+
+.bg3 {
+  background: #323232;
+}
+
+.color4 {
+  color: white;
+}
+
+.bg4 {
+  background: white;
+}
+
+body main {
+  background: #323232;
+  color: white;
+}
+
+/*Fonts*/
+@font-face {
+  font-family: Nexa;
+  src: url(fonts/Nexa-Light.otf);
+}
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(fonts/Nexa-Bold.otf);
+}
+@font-face {
+  font-family: Fresh-Eaters;
+  src: url(fonts/Fresh-Eaters.otf);
+}
+body {
+  font-family: Nexa, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Nexa-Bold, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #388DCE;
+}
+
+.fresh-eaters {
+  font-family: Fresh-Eaters, sans-serif;
+}
+
+.nexa {
+  font-family: Nexa, sans-serif;
+}
+
+.nexa-bold {
+  font-family: Nexa-Bold, sans-serif;
+}
+
+strong {
+  color: #24B4ED;
+}
+
+strong2 {
+  color: #24B4ED;
+  font-weight: bold;
+}
+
+header {
+  z-index: 3;
+  padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  top: 0px;
+  background: #323232;
+  height: 53px;
+  max-height: 53px;
+  min-height: 53px;
+  transition: all 0.5s;
+}
+header,
+header * {
+  box-sizing: border-box;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul {
+  list-style: none;
+}
+header nav .logo {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  transition: 0.5s all;
+}
+header nav .logo span:nth-child(2) {
+  font-size: 15px;
+  position: relative;
+  left: -5px;
+}
+header nav .logo:hover {
+  color: #24B4ED;
+}
+@media (max-width: 1000px) {
+  header nav .logo {
+    width: calc(100vw - 40px);
+    text-align: center;
+  }
+}
+@media (max-width: 1000px) {
+  header nav ul {
+    display: none;
+  }
+  header nav .menu-btn {
+    font-size: 30px;
+    color: white;
+    transition: 0.5s all;
+  }
+  header nav .menu-btn:hover {
+    color: #24B4ED;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  header nav .menu-btn:active {
+    transform: scale(0.7);
+  }
+}
+@media (min-width: 1000px) {
+  header nav .menu-btn {
+    display: none;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header nav ul li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+  }
+  header nav ul li a:hover {
+    color: #24B4ED;
+    cursor: pointer;
+  }
+  header nav ul li .link-active {
+    color: #388DCE;
+  }
+  header nav ul li ul {
+    display: none;
+  }
+  header nav ul li ul li {
+    width: 100%;
+  }
+  header nav ul .sub-menu:hover ul {
+    z-index: -3;
+    padding-top: 30px;
+    display: flex;
+    position: absolute;
+    top: 23px;
+    margin-left: -25px;
+    background: #323232;
+    border-radius: 0px 0px 10px 10px;
+  }
+  header nav ul .sub-menu:hover ul li .link-active {
+    color: #388DCE;
+  }
+  header nav ul .sub-menu:hover ul li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+    text-align: center;
+  }
+  header nav ul .sub-menu:hover ul li a:hover {
+    color: #24B4ED;
+    cursor: pointer;
+  }
+}
+
+.header-down {
+  background: white;
+}
+.header-down .menu-btn {
+  color: #388DCE;
+}
+.header-down nav .logo {
+  color: #388DCE;
+  animation: 0.5s changesitename ease;
+}
+@keyframes changesitename {
+  from {
+    color: #323232;
+  }
+  to {
+    color: #388DCE;
+  }
+}
+.header-down nav ul li .link-active {
+  color: #388DCE;
+}
+.header-down nav ul li a {
+  color: #323232;
+}
+.header-down nav ul .sub-menu:hover ul {
+  background: white;
+}
+.header-down nav ul .sub-menu:hover ul li .link-active {
+  color: #388DCE;
+}
+.header-down nav ul .sub-menu:hover ul li a {
+  color: #323232;
+}
+
+@media (max-width: 1000px) {
+  .menu-small {
+    position: fixed;
+    top: 53px;
+    left: 0px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    animation: 0.5s downmenu ease;
+  }
+  @keyframes downmenu {
+    from {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .menu-small .sub-menu-active ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menu-small .sub-menu-active ul li {
+    width: 100%;
+  }
+  .menu-small li {
+    width: 100%;
+  }
+  .menu-small li .link-active {
+    color: #388DCE;
+  }
+  .menu-small li a {
+    display: block;
+    text-decoration: none;
+    color: #323232;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.5s;
+  }
+  .menu-small li a:hover {
+    color: #24B4ED;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu-up {
+    position: fixed;
+    top: 53px;
+    left: 0px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    animation: 0.5s upmenu ease;
+  }
+  @keyframes upmenu {
+    to {
+      transform: scale(0.1);
+      opacity: 0;
+      display: none;
+    }
+  }
+  .menu-up li {
+    width: 100%;
+  }
+  .menu-up li .link-active {
+    color: #388DCE;
+  }
+  .menu-up li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.5s;
+  }
+  .menu-up li a:hover {
+    color: #24B4ED;
+    cursor: pointer;
+  }
+}
+
+main {
+  margin-top: 53px;
+}
+main .section {
+  padding: 10px;
+}
+main .section-move {
+  padding: 53px 10px 10px 10px;
+}
+
+footer {
+  padding: 10px;
+  background: #388DCE;
+  color: white;
+}
+footer .wsp-msg {
+  position: fixed;
+  bottom: 22px;
+  right: 60px;
+  padding: 5px 10px;
+  background: #ECE5DD;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  transform: scale(0);
+  transform: translateX(200px);
+  animation: 3s ease wspdsp;
+}
+@keyframes wspdsp {
+  0% {
+    transform: translateY(100px) translateX(0px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+footer .wsp-btn {
+  display: flex;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #25D366;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transform: translateX(0px);
+  animation: 1s ease wspdsp2;
+}
+footer .wsp-btn, footer .wsp-btn * {
+  transition: 0.5s all;
+}
+footer .wsp-btn:hover {
+  background: #075E54;
+}
+footer .wsp-btn:hover i {
+  transform: rotate(15deg);
+}
+@keyframes wspdsp2 {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.home-slide {
+  background-image: url(../img/layout/main/home-presentation.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table-cell;
+  vertical-align: middle;
+  min-height: calc(100vh - 53px);
+  height: calc(100vh - 53px);
+  width: 100vw;
+  padding: 20px;
+}
+.home-slide h1,
+.home-slide p {
+  color: white;
+}
+.home-slide .service-name {
+  text-transform: none;
+  font-weight: normal;
+  margin-top: -10px;
+}
+.home-slide p {
+  line-height: 1.5em;
+}
+.home-slide p strong {
+  color: white;
+}
+.home-slide .home-btn {
+  margin: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid white;
+  max-width: 150px;
+  padding: 15px;
+  background: white;
+  color: #323232;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: 1s;
+}
+.home-slide .home-btn:hover {
+  background: #388dce;
+  background: linear-gradient(90deg, #388dce 19%, #24b4ed 50%);
+  color: white;
+  border: 1px solid #388DCE;
+  border-radius: 10px;
+}
+
+.less-shadow {
+  filter: drop-shadow(4px 4px 5px rgba(128, 128, 128, 0.67));
+}
+
+.services-section a img {
+  transition: 0.5s all;
+}
+.services-section a img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(4px 4px 5px rgba(128, 128, 128, 0.67));
+}
+
+/*# sourceMappingURL=styles.css.map */
